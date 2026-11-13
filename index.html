@@ -19,7 +19,6 @@
     --dark: #090909;
     --gold: #D4AF37;
     --bright-gold: #F5D77A;
-    --deep-gold: #76551A;
     --red: #D10A22;
     --white: #F5F5F5;
 }
@@ -34,7 +33,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(3,3,3,0.97);
+    background: rgba(3,3,3,.97);
     border-bottom: 1px solid var(--gold);
     padding: 20px 7%;
     display: flex;
@@ -47,12 +46,7 @@ header {
     font-weight: 900;
     letter-spacing: 2px;
     background: linear-gradient(
-        120deg,
-        #76551A,
-        #D4AF37,
-        #FFF0A6,
-        #B8860B,
-        #D4AF37
+        120deg,#76551A,#D4AF37,#FFF0A6,#B8860B,#D4AF37
     );
     -webkit-background-clip: text;
     color: transparent;
@@ -74,25 +68,58 @@ nav a:hover {
 
 .hero {
     min-height: 470px;
-    padding: 110px 20px;
+    padding: 80px 20px 110px;
     text-align: center;
-    background:
-    radial-gradient(ellipse at center,
-    #281b09 0%,
-    #100b07 40%,
-    #030303 78%);
+    background: radial-gradient(
+        ellipse at center,
+        #281b09 0%,
+        #100b07 40%,
+        #030303 78%
+    );
     border-bottom: 1px solid #76551A;
 }
 
+/* PROFILE */
+
+.profile-area {
+    margin: 0 auto 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #D4AF37;
+    box-shadow:
+        0 0 15px #D10A22,
+        0 0 30px rgba(212,175,55,.35);
+    transition: .4s;
+}
+
+.profile-photo:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 30px #D10A22;
+}
+
+.profile-name {
+    margin-top: 18px;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: #F5D77A;
+    text-shadow: 0 0 12px rgba(212,175,55,.5);
+}
+
 .hero h1 {
-    font-size: clamp(45px, 7vw, 78px);
+    font-size: clamp(45px,7vw,78px);
     font-weight: 900;
     letter-spacing: 4px;
     background: linear-gradient(
-        180deg,
-        #FFF1B0,
-        #D4AF37,
-        #8B681E
+        180deg,#FFF1B0,#D4AF37,#8B681E
     );
     -webkit-background-clip: text;
     color: transparent;
@@ -111,16 +138,15 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
+/* BUTTONS */
+
 .btn {
     display: inline-block;
     padding: 14px 27px;
     margin: 8px;
     border-radius: 5px;
-    background: linear-gradient(135deg,
-        #76551A,
-        #D4AF37,
-        #F5D77A,
-        #A77B20
+    background: linear-gradient(
+        135deg,#76551A,#D4AF37,#F5D77A,#A77B20
     );
     color: #080808;
     text-decoration: none;
@@ -135,10 +161,14 @@ nav a:hover {
 }
 
 .btn.red {
-    background: linear-gradient(135deg,#800014,#D10A22,#F02A3C);
+    background: linear-gradient(
+        135deg,#800014,#D10A22,#F02A3C
+    );
     color: white;
     box-shadow: 0 0 15px rgba(209,10,34,.3);
 }
+
+/* SECTIONS */
 
 section {
     padding: 65px 8%;
@@ -156,8 +186,12 @@ section {
     text-shadow: 0 0 12px rgba(212,175,55,.4);
 }
 
+/* LIVE */
+
 .live {
-    background: linear-gradient(120deg,#100b06,#080808,#160808);
+    background: linear-gradient(
+        120deg,#100b06,#080808,#160808
+    );
     border-bottom: 1px solid #76551A;
     border-top: 1px solid #76551A;
 }
@@ -177,9 +211,13 @@ section {
     color: #e20c2d;
 }
 
+/* GAME CARDS */
+
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns: repeat(
+        auto-fit,minmax(220px,1fr)
+    );
     gap: 20px;
 }
 
@@ -208,22 +246,61 @@ section {
     font-size: 14px;
 }
 
+/* SOCIAL MEDIA */
+
 .social {
     background: #090909;
     border-top: 1px solid #38290e;
 }
 
 .social-card {
-    padding: 25px;
-    background: #121212;
+    padding: 30px 20px;
+    background: linear-gradient(145deg,#171717,#090909);
     border: 1px solid #8c6825;
-    border-radius: 10px;
+    border-radius: 12px;
+    transition: .35s;
+}
+
+.social-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 0 22px rgba(212,175,55,.2);
 }
 
 .social-card h3 {
     color: var(--gold);
     margin-bottom: 12px;
+    font-size: 22px;
 }
+
+.social-card p {
+    color: #aaa;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.social-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.instagram-btn {
+    background: linear-gradient(
+        120deg,#833AB4,#E1306C,#FCAF45
+    );
+    color: white;
+    box-shadow: 0 0 15px rgba(225,48,108,.3);
+}
+
+.tiktok-btn {
+    background: linear-gradient(
+        120deg,#111111,#292929
+    );
+    color: white;
+    border: 1px solid #D4AF37;
+    box-shadow: 0 0 15px rgba(212,175,55,.2);
+}
+
+/* FOOTER */
 
 footer {
     background: #020202;
@@ -238,6 +315,8 @@ footer span {
     color: var(--gold);
 }
 
+/* MOBILE */
+
 @media(max-width:600px) {
     header {
         flex-direction: column;
@@ -250,7 +329,12 @@ footer span {
     }
 
     .hero {
-        padding: 85px 15px;
+        padding: 65px 15px 85px;
+    }
+
+    .profile-photo {
+        width: 160px;
+        height: 160px;
     }
 
     section {
@@ -264,6 +348,7 @@ footer span {
 
 <header>
     <div class="logo">⚔ AWAIS ARENA</div>
+
     <nav>
         <a href="#home">HOME</a>
         <a href="#games">GAMES</a>
@@ -272,29 +357,58 @@ footer span {
     </nav>
 </header>
 
+<!-- HOME -->
+
 <section class="hero" id="home">
+
+    <div class="profile-area">
+        <img
+        src="https://raw.githubusercontent.com/awaisarena56/awaisarena56.github.io/main/Cinematic%20Gamer%20in%20Red%20Smoke.png"
+        alt="Awais Arena Profile"
+        class="profile-photo">
+
+        <div class="profile-name">AWAIS RAZA</div>
+    </div>
+
     <h1>AWAIS ARENA</h1>
     <h2>WELCOME TO THE GAMING WORLD</h2>
+
     <p>Gaming • Live Streams • Shorts • Entertainment</p>
 
     <a class="btn red"
     href="https://www.youtube.com/live/OYPP8ZbGQ38"
-    target="_blank">▶ SUBSCRIBE NOW</a>
+    target="_blank" rel="noopener noreferrer">
+    ▶ SUBSCRIBE NOW
+    </a>
 
     <a class="btn"
     href="https://www.youtube.com/live/OYPP8ZbGQ38"
-    target="_blank">WATCH LIVE</a>
+    target="_blank" rel="noopener noreferrer">
+    WATCH LIVE
+    </a>
+
 </section>
+
+<!-- LIVE STREAM -->
 
 <section class="live" id="live">
+
     <h2><span class="live-dot">●</span> LIVE STREAMING</h2>
+
     <p>Join Awais Arena for exciting gaming live streams!</p>
+
     <a class="btn red"
     href="https://www.youtube.com/live/OYPP8ZbGQ38"
-    target="_blank">WATCH LIVE NOW</a>
+    target="_blank" rel="noopener noreferrer">
+    WATCH LIVE NOW
+    </a>
+
 </section>
 
+<!-- GAMES -->
+
 <section id="games">
+
     <h2 class="section-title">MY <span>GAMES</span></h2>
 
     <div class="cards">
@@ -320,32 +434,67 @@ footer span {
         </div>
 
     </div>
+
 </section>
 
+<!-- SOCIAL MEDIA -->
+
 <section class="social" id="social">
-    <h2 class="section-title">FOLLOW <span>AWAIS ARENA</span></h2>
+
+    <h2 class="section-title">
+        FOLLOW <span>AWAIS ARENA</span>
+    </h2>
 
     <div class="cards">
 
         <div class="social-card">
-            <h3>▶ YOUTUBE</h3>
+            <div class="social-icon">▶️</div>
+            <h3>YOUTUBE</h3>
             <p>Live Streams, Gaming Videos & Shorts</p>
+
             <a class="btn red"
             href="https://www.youtube.com/live/OYPP8ZbGQ38"
-            target="_blank">VISIT YOUTUBE</a>
+            target="_blank" rel="noopener noreferrer">
+            VISIT YOUTUBE
+            </a>
         </div>
 
         <div class="social-card">
-            <h3>⚔ GAMING COMMUNITY</h3>
-            <p>Welcome to the world of Awais Arena</p>
+            <div class="social-icon">📸</div>
+            <h3>INSTAGRAM</h3>
+            <p>Follow Awais Arena on Instagram</p>
+
+            <a class="btn instagram-btn"
+            href="https://www.instagram.com/awaisarena0056?vrfl=eXVnOGdocmRyYjc5"
+            target="_blank" rel="noopener noreferrer">
+            FOLLOW INSTAGRAM
+            </a>
+        </div>
+
+        <div class="social-card">
+            <div class="social-icon">♪</div>
+            <h3>TIKTOK</h3>
+            <p>Gaming Clips, Shorts & Entertainment</p>
+
+            <a class="btn tiktok-btn"
+            href="https://www.tiktok.com/@awais.arena.tikto?_r=1&_t=ZS-9BNXEQGSTmX"
+            target="_blank" rel="noopener noreferrer">
+            FOLLOW TIKTOK
+            </a>
         </div>
 
     </div>
+
 </section>
+
+<!-- FOOTER -->
 
 <footer>
     <p>© 2026 <span>AWAIS ARENA</span> | All Rights Reserved</p>
-    <p style="margin-top:10px;">POWERED BY GAMING • PASSION • ENTERTAINMENT</p>
+
+    <p style="margin-top:10px;">
+    POWERED BY GAMING • PASSION • ENTERTAINMENT
+    </p>
 </footer>
 
 </body>
