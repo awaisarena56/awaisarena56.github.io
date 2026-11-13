@@ -4,181 +4,59 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AWAIS ARENA | Gaming Universe</title>
+<title>AWAIS ARENA | Gaming World</title>
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <style>
-:root {
-  --red: #ed1c24;
-  --gold: #d6ad55;
-  --black: #080808;
-  --panel: #151515;
-  --text: #f5f5f5;
-  --muted: #aaa;
-}
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  background: var(--black);
-  color: var(--text);
-  font-family: Arial, sans-serif;
-}
-header {
-  background: #101010;
-  border-bottom: 1px solid #292929;
-  padding: 18px 7%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-.logo {
-  color: var(--gold);
-  font-size: 25px;
-  font-weight: 900;
-  letter-spacing: 2px;
-}
-nav { display: flex; gap: 22px; flex-wrap: wrap; }
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: bold;
-}
-nav a:hover { color: var(--gold); }
-.hero {
-  min-height: 390px;
-  padding: 65px 7%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: radial-gradient(ellipse at center, #421010 0%, #130909 45%, #080808 80%);
-}
-.hero h1 {
-  font-size: clamp(38px, 7vw, 72px);
-  margin: 12px 0;
-  color: white;
-  text-shadow: 0 0 25px #ed1c2470;
-}
-.hero h1 span { color: var(--gold); }
-.hero p { color: #ccc; line-height: 1.7; }
-.profile {
-  width: 115px;
-  height: 115px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--gold);
-}
-.section { padding: 55px 7%; }
-.section-title {
-  color: var(--gold);
-  font-size: 27px;
-  margin: 0 0 25px;
-  border-left: 4px solid var(--red);
-  padding-left: 13px;
-}
-.games-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 22px;
-}
-.game-card {
-  background: var(--panel);
-  border: 1px solid #292929;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: .25s;
-}
-.game-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--gold);
-  box-shadow: 0 8px 25px #000;
-}
-.game-card img {
-  width: 100%;
-  height: 165px;
-  object-fit: cover;
-  background: #222;
-}
-.game-info { padding: 17px; }
-.game-info h3 { color: var(--gold); margin: 0 0 10px; }
-.game-info p {
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.5;
-}
-.btn {
-  display: inline-block;
-  padding: 11px 18px;
-  background: var(--red);
-  color: white;
-  text-decoration: none;
-  border: 0;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 8px;
-}
-.btn:hover { background: #b80e16; }
-.btn.gold { background: #a77d2b; color: #080808; }
-.btn.dark { background: #333; }
-.panel {
-  background: var(--panel);
-  border: 1px solid #333;
-  border-radius: 12px;
-  padding: 24px;
-  max-width: 650px;
-  margin: 20px auto;
-}
-input, textarea {
-  display: block;
-  width: 100%;
-  padding: 13px;
-  margin: 10px 0;
-  background: #090909;
-  border: 1px solid #444;
-  border-radius: 5px;
-  color: white;
-  font: inherit;
-}
-textarea { min-height: 100px; resize: vertical; }
-label { color: var(--gold); font-size: 14px; }
-.notice { color: var(--muted); font-size: 13px; line-height: 1.6; }
-.status { margin: 12px 0; color: var(--gold); }
-.detail-image {
-  width: 100%;
-  max-height: 390px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-.hidden { display: none !important; }
-footer {
-  text-align: center;
-  padding: 30px 15px;
-  color: #888;
-  border-top: 1px solid #292929;
-  font-size: 13px;
-}
-.social-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-.social-links a { text-decoration: none; }
-.admin-row {
-  border: 1px solid #333;
-  padding: 15px;
-  margin: 12px 0;
-  border-radius: 8px;
-}
-.admin-row strong { color: var(--gold); }
-@media(max-width:600px) {
-  header { justify-content: center; text-align: center; }
-  nav { justify-content: center; gap: 14px; }
-  .section { padding: 38px 5%; }
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#080808;color:#fff;font-family:Arial,sans-serif}
+header{background:#101010;border-bottom:2px solid #b90018;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px}
+.logo{font-size:25px;font-weight:900;color:#d4af37;letter-spacing:2px}
+nav{display:flex;gap:20px;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;font-weight:bold;font-size:13px}
+nav a:hover{color:#d4af37}
+.hero{min-height:390px;padding:65px 20px;text-align:center;background:radial-gradient(circle at center,#351014,#080808 70%)}
+.profile{width:125px;height:125px;border-radius:50%;object-fit:cover;border:3px solid #d4af37;margin-bottom:18px}
+.hero h1{font-size:42px;color:#d4af37;letter-spacing:3px}
+.hero p{color:#ccc;margin-top:12px}
+.section{padding:55px 7%;text-align:center}
+.section h2{font-size:30px;color:#d4af37;margin-bottom:12px}
+.subtitle{color:#aaa;margin-bottom:30px}
+.games-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:25px}
+.game-card{background:#151515;border:1px solid #333;border-radius:12px;overflow:hidden;transition:.25s;text-align:left}
+.game-card:hover{transform:translateY(-5px);border-color:#d4af37;box-shadow:0 8px 25px #000}
+.game-card img{width:100%;height:155px;object-fit:cover;background:#222}
+.game-placeholder{height:155px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#26080c,#111);color:#d4af37;font-size:22px;font-weight:bold;text-align:center;padding:15px}
+.game-info{padding:17px}
+.game-info h3{color:#d4af37;margin-bottom:9px}
+.game-info p{color:#bbb;font-size:14px;line-height:1.5;min-height:40px}
+.btn{display:inline-block;background:#b90018;color:white;border:0;border-radius:6px;padding:11px 18px;margin-top:14px;text-decoration:none;font-weight:bold;cursor:pointer}
+.btn:hover{background:#d4af37;color:#111}
+.gold-btn{background:#d4af37;color:#111}
+.gold-btn:hover{background:#fff}
+.live-box{background:#151515;border:1px solid #333;border-radius:12px;padding:30px;max-width:700px;margin:auto}
+.social-links{display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
+.social-links a{color:#d4af37;text-decoration:none;border:1px solid #d4af37;padding:13px 22px;border-radius:7px}
+.social-links a:hover{background:#d4af37;color:#111}
+#admin{background:#111;border-top:2px solid #b90018}
+.admin-box{max-width:750px;margin:auto;background:#191919;border:1px solid #444;border-radius:12px;padding:25px;text-align:left}
+.admin-box h3{color:#d4af37;margin-bottom:18px}
+input,textarea{width:100%;padding:13px;margin:8px 0 15px;background:#080808;border:1px solid #444;color:white;border-radius:6px;font-size:15px}
+textarea{min-height:95px;resize:vertical}
+label{color:#ddd;font-size:14px}
+.admin-actions{display:flex;gap:10px;flex-wrap:wrap}
+.admin-game{padding:13px;border:1px solid #444;border-radius:7px;margin-top:12px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.admin-game span{color:#eee}
+.status{color:#d4af37;margin:12px 0;overflow-wrap:anywhere}
+.hidden{display:none!important}
+.detail-box{max-width:800px;margin:auto;background:#151515;border:1px solid #444;border-radius:12px;padding:25px;text-align:left}
+.detail-box img{width:100%;max-height:350px;object-fit:cover;border-radius:8px;margin:15px 0}
+footer{padding:25px;text-align:center;color:#888;background:#101010;border-top:1px solid #333}
+@media(max-width:600px){
+ header{justify-content:center;text-align:center}
+ .hero h1{font-size:30px}
+ .section{padding:40px 5%}
 }
 </style>
 </head>
@@ -188,154 +66,166 @@ footer {
 <header>
   <div class="logo">AWAIS ARENA</div>
   <nav>
-    <a href="index.html">HOME</a>
-    <a href="index.html#games">GAMES</a>
-    <a href="index.html#live">LIVE</a>
-    <a href="index.html#social">SOCIAL</a>
-    <a href="index.html?page=more">MORE GAMES</a>
-    <a href="index.html?page=admin">ADMIN</a>
+    <a href="#home">HOME</a>
+    <a href="#games">GAMES</a>
+    <a href="#live">LIVE</a>
+    <a href="#social">SOCIAL</a>
+    <a href="#admin">ADMIN</a>
   </nav>
 </header>
 
-<main id="homePage">
-  <section class="hero">
-    <div>
-      <img class="profile"
-        src="https://raw.githubusercontent.com/awaisarena56/awaisarena56.github.io/main/Cinematic%20Gamer%20in%20Red%20Smoke.png"
-        alt="Awais Raza">
-      <h1>AWAIS <span>ARENA</span></h1>
-      <p>WELCOME TO MY GAMING WORLD</p>
-      <p>Games • Gameplay • Live Streams • Entertainment</p>
-      <a class="btn gold" href="#games">EXPLORE GAMES</a>
-    </div>
-  </section>
+<section class="hero" id="home">
+  <img class="profile"
+  src="https://raw.githubusercontent.com/awaisarena56/awaisarena56.github.io/main/Cinematic%20Gamer%20in%20Red%20Smoke.png"
+  alt="Awais Raza">
+  <h1>AWAIS RAZA</h1>
+  <p>WELCOME TO AWAIS ARENA — YOUR GAMING WORLD</p>
+  <a class="btn gold-btn" href="#games">EXPLORE GAMES</a>
+</section>
 
-  <section class="section" id="games">
-    <h2 class="section-title">FEATURED GAMES</h2>
-    <div class="games-grid">
+<section class="section" id="games">
+  <h2>FEATURED GAMES</h2>
+  <p class="subtitle">Explore my favourite games</p>
 
-      <article class="game-card">
-        <img src="https://placehold.co/600x350/171717/ed1c24?text=THE+LAST+OF+US" alt="The Last of Us">
-        <div class="game-info">
-          <h3>THE LAST OF US</h3>
-          <p>Explore the world of The Last of Us.</p>
-          <a class="btn" href="index.html?featured=last-of-us">VIEW GAME</a>
-        </div>
-      </article>
+  <div class="games-grid">
 
-      <article class="game-card">
-        <img src="https://placehold.co/600x350/171717/d6ad55?text=MINECRAFT" alt="Minecraft">
-        <div class="game-info">
-          <h3>MINECRAFT</h3>
-          <p>Build, explore and create your own world.</p>
-          <a class="btn" href="index.html?featured=minecraft">VIEW GAME</a>
-        </div>
-      </article>
+    <article class="game-card">
+      <div class="game-placeholder">THE LAST OF US</div>
+      <div class="game-info">
+        <h3>THE LAST OF US</h3>
+        <p>Explore the world of The Last of Us.</p>
+        <button class="btn" onclick="showDetail('THE LAST OF US','Explore the world of The Last of Us.')">VIEW GAME</button>
+      </div>
+    </article>
 
-      <article class="game-card">
-        <img src="https://placehold.co/600x350/171717/ed1c24?text=VALORANT" alt="Valorant">
-        <div class="game-info">
-          <h3>VALORANT</h3>
-          <p>Discover tactical action and gameplay.</p>
-          <a class="btn" href="index.html?featured=valorant">VIEW GAME</a>
-        </div>
-      </article>
+    <article class="game-card">
+      <div class="game-placeholder">MINECRAFT</div>
+      <div class="game-info">
+        <h3>MINECRAFT</h3>
+        <p>Build, explore and create your own world.</p>
+        <button class="btn" onclick="showDetail('MINECRAFT','Build, explore and create your own world.')">VIEW GAME</button>
+      </div>
+    </article>
 
-      <article class="game-card">
-        <img src="https://placehold.co/600x350/171717/d6ad55?text=CRICKET+26" alt="Cricket 26">
-        <div class="game-info">
-          <h3>CRICKET 26</h3>
-          <p>Enjoy cricket gaming and gameplay.</p>
-          <a class="btn" href="index.html?featured=cricket-26">VIEW GAME</a>
-        </div>
-      </article>
+    <article class="game-card">
+      <div class="game-placeholder">VALORANT</div>
+      <div class="game-info">
+        <h3>VALORANT</h3>
+        <p>Enter the tactical world of Valorant.</p>
+        <button class="btn" onclick="showDetail('VALORANT','Enter the tactical world of Valorant.')">VIEW GAME</button>
+      </div>
+    </article>
 
-    </div>
-    <div style="text-align:center;margin-top:30px">
-      <a class="btn gold" href="index.html?page=more">MORE GAMES →</a>
-    </div>
-  </section>
+    <article class="game-card">
+      <div class="game-placeholder">CRICKET 26</div>
+      <div class="game-info">
+        <h3>CRICKET 26</h3>
+        <p>Enjoy the cricket gaming experience.</p>
+        <button class="btn" onclick="showDetail('CRICKET 26','Enjoy the cricket gaming experience.')">VIEW GAME</button>
+      </div>
+    </article>
 
-  <section class="section" id="live">
-    <h2 class="section-title">LIVE STREAM</h2>
-    <div class="panel">
-      <h3 style="color:var(--gold)">WATCH MY YOUTUBE LIVE</h3>
-      <p>Join my gaming streams on YouTube.</p>
-      <a class="btn" href="https://www.youtube.com/live/OYPP8ZbGQ38" target="_blank" rel="noopener">WATCH LIVE</a>
-    </div>
-  </section>
+    <article class="game-card">
+      <div class="game-placeholder">MORE GAMES</div>
+      <div class="game-info">
+        <h3>MORE GAMES</h3>
+        <p>Discover more games added to AWAIS ARENA.</p>
+        <a class="btn" href="#more-games">EXPLORE MORE</a>
+      </div>
+    </article>
 
-  <section class="section" id="social">
-    <h2 class="section-title">FOLLOW ME</h2>
-    <div class="social-links">
-      <a class="btn" href="https://www.youtube.com/live/OYPP8ZbGQ38" target="_blank" rel="noopener">YOUTUBE</a>
-      <a class="btn" href="https://www.instagram.com/awaisarena0056?vrfl=eXVnOGdocmRyYjc5" target="_blank" rel="noopener">INSTAGRAM</a>
-      <a class="btn" href="https://www.tiktok.com/@awais.arena.tikto?_r=1&_t=ZS-9BNXEQGSTmX" target="_blank" rel="noopener">TIKTOK</a>
-    </div>
-  </section>
-</main>
-
-<section id="morePage" class="section hidden">
-  <h2 class="section-title">MORE GAMES</h2>
-  <p class="notice">Discover more games added to AWAIS ARENA.</p>
-  <div id="moreGamesGrid" class="games-grid">
-    <p class="notice">Loading games...</p>
   </div>
-  <a class="btn dark" href="index.html">← BACK HOME</a>
 </section>
 
-<section id="detailPage" class="section hidden">
-  <div class="panel" id="detailContent">Loading game...</div>
-  <a class="btn dark" href="index.html?page=more">← BACK TO GAMES</a>
+<section class="section hidden" id="game-detail">
+  <div class="detail-box">
+    <h2 id="detail-title">GAME</h2>
+    <p id="detail-description"></p>
+    <button class="btn" onclick="closeDetail()">BACK TO GAMES</button>
+  </div>
 </section>
 
-<section id="adminPage" class="section hidden">
-  <h2 class="section-title">ADMIN PANEL</h2>
+<section class="section" id="more-games">
+  <h2>MORE GAMES</h2>
+  <p class="subtitle">New games added to AWAIS ARENA</p>
+  <div class="games-grid" id="database-games">
+    <p class="status">Loading games...</p>
+  </div>
+</section>
 
-  <div id="loginPanel" class="panel">
-    <h3 style="color:var(--gold)">ADMIN LOGIN</h3>
-    <p class="notice">Log in with your Supabase account.</p>
-    <form id="loginForm">
+<section class="section" id="live">
+  <h2>LIVE STREAM</h2>
+  <div class="live-box">
+    <h3 style="color:#d4af37">WATCH MY YOUTUBE LIVE</h3>
+    <p style="color:#bbb;margin-top:12px">Join me for gaming livestreams.</p>
+    <a class="btn" target="_blank" rel="noopener"
+    href="https://www.youtube.com/live/OYPP8ZbGQ38">WATCH LIVE</a>
+  </div>
+</section>
+
+<section class="section" id="social">
+  <h2>FOLLOW ME</h2>
+  <p class="subtitle">Connect with AWAIS ARENA</p>
+  <div class="social-links">
+    <a target="_blank" rel="noopener" href="https://www.youtube.com/live/OYPP8ZbGQ38">YOUTUBE</a>
+    <a target="_blank" rel="noopener" href="https://www.instagram.com/awaisarena0056?vrfl=eXVnOGdocmRyYjc5">INSTAGRAM</a>
+    <a target="_blank" rel="noopener" href="https://www.tiktok.com/@awais.arena.tikto?_r=1&_t=ZS-9BNXEQGSTmX">TIKTOK</a>
+  </div>
+</section>
+
+<section class="section" id="admin">
+  <h2>ADMIN PANEL</h2>
+  <p class="subtitle">Admin access only</p>
+
+  <div class="admin-box">
+
+    <div id="login-area">
+      <h3>ADMIN LOGIN</h3>
       <label>Email</label>
-      <input id="loginEmail" type="email" placeholder="Your email" required>
+      <input type="email" id="admin-email" placeholder="Enter your email">
       <label>Password</label>
-      <input id="loginPassword" type="password" placeholder="Your password" required>
-      <button class="btn" type="submit">LOGIN</button>
-    </form>
-    <div id="loginStatus" class="status"></div>
+      <input type="password" id="admin-password" placeholder="Enter your password">
+      <button class="btn" id="login-button" onclick="loginAdmin()">LOGIN</button>
+    </div>
+
+    <div id="dashboard" class="hidden">
+      <div class="admin-actions">
+        <h3 style="flex:1">ADMIN DASHBOARD</h3>
+        <button class="btn" onclick="logoutAdmin()">LOGOUT</button>
+      </div>
+
+      <h3 id="form-heading">ADD NEW GAME</h3>
+      <form id="game-form">
+        <label>Game Title</label>
+        <input id="game-title" type="text" placeholder="Game title" required>
+
+        <label>Game Description</label>
+        <textarea id="game-description" placeholder="Game description"></textarea>
+
+        <label>Image URL</label>
+        <input id="game-image" type="url" placeholder="Paste image URL">
+
+        <label>Official Download URL</label>
+        <input id="game-download" type="url" placeholder="Official or authorized download link">
+
+        <div class="admin-actions">
+          <button class="btn gold-btn" type="submit" id="save-game">ADD GAME</button>
+          <button class="btn hidden" type="button" id="cancel-edit" onclick="cancelEdit()">CANCEL EDIT</button>
+        </div>
+      </form>
+
+      <p class="status" id="admin-status"></p>
+
+      <h3 style="margin-top:25px">YOUR GAMES</h3>
+      <div id="admin-games-list"></div>
+    </div>
+
+    <p class="status" id="login-status"></p>
   </div>
-
-  <div id="adminDashboard" class="panel hidden">
-    <h3 style="color:var(--gold)">GAME MANAGEMENT</h3>
-    <p class="notice">You are logged in as an administrator.</p>
-    <button class="btn dark" id="logoutBtn">LOG OUT</button>
-
-    <hr style="border-color:#333;margin:25px 0">
-
-    <h3 id="formHeading">ADD NEW GAME</h3>
-    <form id="gameForm">
-      <input id="gameTitle" type="text" placeholder="Game title" required>
-      <textarea id="gameDescription" placeholder="Game description"></textarea>
-      <input id="gameImage" type="url" placeholder="Image URL (https://...)" >
-      <input id="gameDownload" type="url" placeholder="Official download URL (https://...)">
-      <button class="btn gold" type="submit" id="saveGameBtn">ADD GAME</button>
-      <button class="btn dark hidden" type="button" id="cancelEditBtn">CANCEL EDIT</button>
-    </form>
-    <div id="adminStatus" class="status"></div>
-
-    <hr style="border-color:#333;margin:25px 0">
-    <h3>YOUR GAMES</h3>
-    <div id="adminGamesList">Loading...</div>
-  </div>
-</section>
-
-<section id="featuredDetailPage" class="section hidden">
-  <div class="panel" id="featuredDetailContent"></div>
-  <a class="btn dark" href="index.html">← BACK HOME</a>
 </section>
 
 <footer>
-  © 2026 AWAIS ARENA | ALL RIGHTS RESERVED
+  © 2026 AWAIS ARENA | CREATED BY AWAIS RAZA
 </footer>
 
 <script>
@@ -343,343 +233,375 @@ footer {
 const SUPABASE_URL = "https://bunhfhslxwopegddbxro.supabase.co";
 const SUPABASE_KEY = "sb_publishable_ZBKEJ8zfSYRz5blaPL7c9A_zLbrPEKP";
 
-const client = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+/* Explicitly use the public schema */
+const client = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_KEY,
+  {
+    db: {
+      schema: "public"
+    }
+  }
+);
 
-const $ = (id) => document.getElementById(id);
-let editingGameId = null;
+let currentUser = null;
 let currentGames = [];
+let editingGameId = null;
 
 function escapeHTML(value) {
-  return String(value ?? "").replace(/[&<>"']/g, char => ({
-    "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;"
-  }[char]));
+  return String(value ?? "").replace(/[&<>"']/g, function(char) {
+    return {
+      "&":"&amp;",
+      "<":"&lt;",
+      ">":"&gt;",
+      '"':"&quot;",
+      "'":"&#039;"
+    }[char];
+  });
 }
 
-function safeURL(value) {
-  try {
-    const url = new URL(value);
-    if (url.protocol === "https:" || url.protocol === "http:") return url.href;
-  } catch (e) {}
-  return "";
+function showDetail(title, description) {
+  document.getElementById("detail-title").textContent = title;
+  document.getElementById("detail-description").textContent = description;
+  document.getElementById("game-detail").classList.remove("hidden");
+  document.getElementById("game-detail").scrollIntoView({behavior:"smooth"});
 }
 
-function showPage(pageId) {
-  ["homePage","morePage","detailPage","adminPage","featuredDetailPage"]
-    .forEach(id => $(id).classList.add("hidden"));
-  $(pageId).classList.remove("hidden");
+function closeDetail() {
+  document.getElementById("game-detail").classList.add("hidden");
+  document.getElementById("games").scrollIntoView({behavior:"smooth"});
 }
 
-/* LOAD PUBLIC GAMES */
+/* PUBLIC GAME LIST */
 async function loadGames() {
+  const container = document.getElementById("database-games");
+  container.innerHTML = '<p class="status">Loading games...</p>';
+
   const { data, error } = await client
+    .schema("public")
     .from("games")
     .select("*")
-    .order("created_at", { ascending: false });
+    .order("created_at", {ascending:false});
 
   if (error) {
-    $("moreGamesGrid").innerHTML =
-      '<p class="notice">Games could not be loaded. Please check your Supabase table and policies.</p>';
+    container.innerHTML =
+      '<p class="status">Could not load games: ' +
+      escapeHTML(error.message) + '</p>';
+    console.error("Load games error:", error);
     return;
   }
 
   currentGames = data || [];
-  renderMoreGames();
-}
 
-function renderMoreGames() {
-  const grid = $("moreGamesGrid");
-
-  if (!currentGames.length) {
-    grid.innerHTML = '<p class="notice">No extra games have been added yet.</p>';
+  if (currentGames.length === 0) {
+    container.innerHTML =
+      '<p class="status">No extra games added yet.</p>';
     return;
   }
 
-  grid.innerHTML = currentGames.map(game => {
-    const image = safeURL(game.image_url);
-    return `
-      <article class="game-card">
-        <img src="${image || "https://placehold.co/600x350/171717/d6ad55?text=AWAIS+ARENA"}" alt="${escapeHTML(game.title)}">
-        <div class="game-info">
-          <h3>${escapeHTML(game.title)}</h3>
-          <p>${escapeHTML(game.description || "Explore this game.")}</p>
-          <a class="btn" href="index.html?game=${encodeURIComponent(game.id)}">VIEW GAME</a>
-        </div>
-      </article>`;
-  }).join("");
+  container.innerHTML = currentGames.map(game => `
+    <article class="game-card">
+      ${
+        game.image_url
+        ? `<img src="${escapeHTML(game.image_url)}" alt="${escapeHTML(game.title)}" onerror="this.style.display='none'">`
+        : `<div class="game-placeholder">${escapeHTML(game.title)}</div>`
+      }
+      <div class="game-info">
+        <h3>${escapeHTML(game.title)}</h3>
+        <p>${escapeHTML(game.description || "Explore this game.")}</p>
+        <button class="btn" onclick="showDatabaseDetail(${JSON.stringify(String(game.id))})">VIEW GAME</button>
+      </div>
+    </article>
+  `).join("");
+
+  if (currentUser) renderAdminGames();
 }
 
-/* GAME DETAILS */
-async function showGameDetails(id) {
-  showPage("detailPage");
-  $("detailContent").textContent = "Loading game details...";
-
-  const { data, error } = await client
-    .from("games")
-    .select("*")
-    .eq("id", id)
-    .maybeSingle();
-
-  if (error || !data) {
-    $("detailContent").textContent = "Game not found.";
-    return;
-  }
-
-  const image = safeURL(data.image_url);
-  const download = safeURL(data.download_url);
-
-  $("detailContent").innerHTML = `
-    ${image ? `<img class="detail-image" src="${image}" alt="${escapeHTML(data.title)}">` : ""}
-    <h2 style="color:var(--gold)">${escapeHTML(data.title)}</h2>
-    <p style="line-height:1.8;color:#ccc">${escapeHTML(data.description || "No description available.")}</p>
-    ${download ? `<a class="btn gold" href="${download}" target="_blank" rel="noopener noreferrer">OFFICIAL DOWNLOAD</a>` : ""}
-  `;
-}
-
-/* FEATURED GAME DETAILS */
-const featuredGames = {
-  "last-of-us": {
-    title: "THE LAST OF US",
-    description: "Explore The Last of Us gameplay, videos and updates on AWAIS ARENA."
-  },
-  "minecraft": {
-    title: "MINECRAFT",
-    description: "Discover Minecraft gameplay, creative builds and adventures."
-  },
-  "valorant": {
-    title: "VALORANT",
-    description: "Explore Valorant gameplay and gaming videos."
-  },
-  "cricket-26": {
-    title: "CRICKET 26",
-    description: "Check out Cricket 26 gameplay and cricket gaming content."
-  }
-};
-
-function showFeatured(slug) {
-  const game = featuredGames[slug];
+function showDatabaseDetail(id) {
+  const game = currentGames.find(item => String(item.id) === String(id));
   if (!game) return;
 
-  showPage("featuredDetailPage");
-  $("featuredDetailContent").innerHTML = `
-    <h2 style="color:var(--gold)">${escapeHTML(game.title)}</h2>
-    <p style="line-height:1.8;color:#ccc">${escapeHTML(game.description)}</p>
-    <p class="notice">More content coming soon.</p>
-  `;
-}
+  document.getElementById("detail-title").textContent = game.title || "GAME";
+  document.getElementById("detail-description").textContent =
+    game.description || "Explore this game.";
 
-/* ADMIN LOGIN AND ACCESS CHECK */
-async function checkAdmin() {
-  const { data: sessionData } = await client.auth.getSession();
-  const user = sessionData?.session?.user;
+  const box = document.querySelector("#game-detail .detail-box");
+  const oldImage = document.getElementById("detail-image");
+  if (oldImage) oldImage.remove();
 
-  if (!user) {
-    $("loginPanel").classList.remove("hidden");
-    $("adminDashboard").classList.add("hidden");
-    return false;
+  if (game.image_url) {
+    const image = document.createElement("img");
+    image.id = "detail-image";
+    image.src = game.image_url;
+    image.alt = game.title || "Game image";
+    box.insertBefore(image, document.getElementById("detail-description"));
   }
 
-  const { data: adminRecord, error } = await client
+  const oldDownload = document.getElementById("detail-download");
+  if (oldDownload) oldDownload.remove();
+
+  if (game.download_url) {
+    const link = document.createElement("a");
+    link.id = "detail-download";
+    link.className = "btn";
+    link.href = game.download_url;
+    link.target = "_blank";
+    link.rel = "noopener";
+    link.textContent = "OFFICIAL DOWNLOAD";
+    box.appendChild(link);
+  }
+
+  document.getElementById("game-detail").classList.remove("hidden");
+  document.getElementById("game-detail").scrollIntoView({behavior:"smooth"});
+}
+
+/* ADMIN LOGIN */
+async function loginAdmin() {
+  const email = document.getElementById("admin-email").value.trim();
+  const password = document.getElementById("admin-password").value;
+  const status = document.getElementById("login-status");
+
+  if (!email || !password) {
+    status.textContent = "Please enter your email and password.";
+    return;
+  }
+
+  status.textContent = "Logging in...";
+
+  const { data, error } = await client.auth.signInWithPassword({
+    email,
+    password
+  });
+
+  if (error) {
+    status.textContent = "Login error: " + error.message;
+    return;
+  }
+
+  currentUser = data.user;
+  await checkAdmin();
+}
+
+async function checkAdmin() {
+  const status = document.getElementById("login-status");
+
+  if (!currentUser) {
+    document.getElementById("login-area").classList.remove("hidden");
+    document.getElementById("dashboard").classList.add("hidden");
+    return;
+  }
+
+  const { data, error } = await client
+    .schema("public")
     .from("admins")
     .select("user_id")
-    .eq("user_id", user.id)
+    .eq("user_id", currentUser.id)
     .maybeSingle();
 
-  if (error || !adminRecord) {
-    await client.auth.signOut();
-    $("loginStatus").textContent = "This account is not registered as an admin.";
-    $("loginPanel").classList.remove("hidden");
-    $("adminDashboard").classList.add("hidden");
-    return false;
+  if (error) {
+    status.textContent = "Admin check error: " + error.message;
+    return;
   }
 
-  $("loginPanel").classList.add("hidden");
-  $("adminDashboard").classList.remove("hidden");
-  await loadAdminGames();
-  return true;
+  if (!data) {
+    status.textContent = "This account is not registered as an admin.";
+    await client.auth.signOut();
+    currentUser = null;
+    return;
+  }
+
+  status.textContent = "Admin login successful.";
+
+  document.getElementById("login-area").classList.add("hidden");
+  document.getElementById("dashboard").classList.remove("hidden");
+
+  await loadGames();
+  renderAdminGames();
 }
 
-$("loginForm").addEventListener("submit", async (event) => {
-  event.preventDefault();
-  $("loginStatus").textContent = "Logging in...";
-
-  const email = $("loginEmail").value.trim();
-  const password = $("loginPassword").value;
-
-  const { error } = await client.auth.signInWithPassword({ email, password });
-
-  if (error) {
-    $("loginStatus").textContent = "Login failed: " + error.message;
-    return;
-  }
-
-  const allowed = await checkAdmin();
-
-  if (allowed) {
-    $("loginStatus").textContent = "";
-  }
-});
-
-$("logoutBtn").addEventListener("click", async () => {
+async function logoutAdmin() {
   await client.auth.signOut();
-  $("adminDashboard").classList.add("hidden");
-  $("loginPanel").classList.remove("hidden");
-  $("loginStatus").textContent = "You have logged out.";
-});
+  currentUser = null;
 
-/* ADMIN GAME LIST */
-async function loadAdminGames() {
-  const { data, error } = await client
-    .from("games")
-    .select("*")
-    .order("created_at", { ascending: false });
-
-  if (error) {
-    $("adminGamesList").textContent = "Could not load games: " + error.message;
-    return;
-  }
-
-  const games = data || [];
-
-  if (!games.length) {
-    $("adminGamesList").innerHTML = '<p class="notice">No games added yet.</p>';
-    return;
-  }
-
-  $("adminGamesList").innerHTML = games.map(game => `
-    <div class="admin-row">
-      <strong>${escapeHTML(game.title)}</strong>
-      <p class="notice">${escapeHTML(game.description || "")}</p>
-      <button class="btn gold" onclick="editGame(${Number(game.id)})">EDIT</button>
-      <button class="btn dark" onclick="deleteGame(${Number(game.id)})">DELETE</button>
-    </div>
-  `).join("");
+  document.getElementById("login-area").classList.remove("hidden");
+  document.getElementById("dashboard").classList.add("hidden");
+  document.getElementById("login-status").textContent = "Logged out.";
 }
 
 /* ADD OR UPDATE GAME */
-$("gameForm").addEventListener("submit", async (event) => {
+document.getElementById("game-form").addEventListener("submit", async function(event) {
   event.preventDefault();
-  $("adminStatus").textContent = "Saving game...";
 
-  const title = $("gameTitle").value.trim();
-  const description = $("gameDescription").value.trim();
-  const image = $("gameImage").value.trim();
-  const download = $("gameDownload").value.trim();
+  if (!currentUser) {
+    document.getElementById("admin-status").textContent = "Please log in first.";
+    return;
+  }
+
+  const title = document.getElementById("game-title").value.trim();
+  const description = document.getElementById("game-description").value.trim();
+  const image_url = document.getElementById("game-image").value.trim();
+  const download_url = document.getElementById("game-download").value.trim();
+  const status = document.getElementById("admin-status");
+  const saveButton = document.getElementById("save-game");
 
   if (!title) {
-    $("adminStatus").textContent = "Please enter a game title.";
-    return;
-  }
-
-  if (image && !safeURL(image)) {
-    $("adminStatus").textContent = "Please enter a valid image URL.";
-    return;
-  }
-
-  if (download && !safeURL(download)) {
-    $("adminStatus").textContent = "Please enter a valid download URL.";
+    status.textContent = "Please enter a game title.";
     return;
   }
 
   const gameData = {
     title,
     description,
-    image_url: image || null,
-    download_url: download || null
+    image_url,
+    download_url
   };
+
+  saveButton.disabled = true;
+  status.textContent = "Saving game...";
 
   let result;
 
   if (editingGameId !== null) {
-    result = await client.from("games").update(gameData).eq("id", editingGameId);
+    result = await client
+      .schema("public")
+      .from("games")
+      .update(gameData)
+      .eq("id", editingGameId);
   } else {
-    result = await client.from("games").insert([gameData]);
+    /*
+      Your id column is int8. This also supports a table
+      where id does not have an automatic default value.
+    */
+    const { data: lastRow, error: idError } = await client
+      .schema("public")
+      .from("games")
+      .select("id")
+      .order("id", {ascending:false})
+      .limit(1)
+      .maybeSingle();
+
+    if (idError) {
+      saveButton.disabled = false;
+      status.textContent = "Could not prepare game ID: " + idError.message;
+      return;
+    }
+
+    const nextId = lastRow ? Number(lastRow.id) + 1 : 1;
+
+    result = await client
+      .schema("public")
+      .from("games")
+      .insert([{id:nextId, ...gameData}]);
   }
 
+  saveButton.disabled = false;
+
   if (result.error) {
-    $("adminStatus").textContent = "Error: " + result.error.message;
+    status.textContent = "Error: " + result.error.message;
+    console.error("Save game error:", result.error);
     return;
   }
 
-  $("adminStatus").textContent = editingGameId !== null
+  status.textContent = editingGameId !== null
     ? "Game updated successfully!"
     : "Game added successfully!";
 
-  resetGameForm();
-  await loadAdminGames();
+  cancelEdit();
   await loadGames();
+  renderAdminGames();
 });
 
-window.editGame = function(id) {
-  const game = currentGames.find(item => Number(item.id) === Number(id));
+/* ADMIN GAME LIST */
+function renderAdminGames() {
+  const list = document.getElementById("admin-games-list");
 
-  if (!game) {
-    $("adminStatus").textContent = "Please refresh and try again.";
+  if (!currentGames.length) {
+    list.innerHTML = '<p class="status">No games added yet.</p>';
     return;
   }
+
+  list.innerHTML = currentGames.map(game => `
+    <div class="admin-game">
+      <span>${escapeHTML(game.title)}</span>
+      <div class="admin-actions">
+        <button class="btn gold-btn" onclick="editGame(${JSON.stringify(String(game.id))})">EDIT</button>
+        <button class="btn" onclick="deleteGame(${JSON.stringify(String(game.id))})">DELETE</button>
+      </div>
+    </div>
+  `).join("");
+}
+
+function editGame(id) {
+  const game = currentGames.find(item => String(item.id) === String(id));
+  if (!game) return;
 
   editingGameId = game.id;
-  $("gameTitle").value = game.title || "";
-  $("gameDescription").value = game.description || "";
-  $("gameImage").value = game.image_url || "";
-  $("gameDownload").value = game.download_url || "";
-  $("formHeading").textContent = "EDIT GAME";
-  $("saveGameBtn").textContent = "SAVE CHANGES";
-  $("cancelEditBtn").classList.remove("hidden");
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
 
-window.deleteGame = async function(id) {
+  document.getElementById("game-title").value = game.title || "";
+  document.getElementById("game-description").value = game.description || "";
+  document.getElementById("game-image").value = game.image_url || "";
+  document.getElementById("game-download").value = game.download_url || "";
+
+  document.getElementById("form-heading").textContent = "EDIT GAME";
+  document.getElementById("save-game").textContent = "UPDATE GAME";
+  document.getElementById("cancel-edit").classList.remove("hidden");
+
+  document.getElementById("game-form").scrollIntoView({behavior:"smooth"});
+}
+
+function cancelEdit() {
+  editingGameId = null;
+  document.getElementById("game-form").reset();
+  document.getElementById("form-heading").textContent = "ADD NEW GAME";
+  document.getElementById("save-game").textContent = "ADD GAME";
+  document.getElementById("cancel-edit").classList.add("hidden");
+}
+
+async function deleteGame(id) {
+  if (!currentUser) return;
+
   if (!confirm("Are you sure you want to delete this game?")) return;
 
-  $("adminStatus").textContent = "Deleting...";
+  const status = document.getElementById("admin-status");
+  status.textContent = "Deleting game...";
 
-  const { error } = await client.from("games").delete().eq("id", id);
+  const { error } = await client
+    .schema("public")
+    .from("games")
+    .delete()
+    .eq("id", id);
 
   if (error) {
-    $("adminStatus").textContent = "Delete failed: " + error.message;
+    status.textContent = "Delete error: " + error.message;
     return;
   }
 
-  $("adminStatus").textContent = "Game deleted successfully!";
-  resetGameForm();
-  await loadAdminGames();
+  status.textContent = "Game deleted successfully!";
   await loadGames();
-};
-
-function resetGameForm() {
-  editingGameId = null;
-  $("gameForm").reset();
-  $("formHeading").textContent = "ADD NEW GAME";
-  $("saveGameBtn").textContent = "ADD GAME";
-  $("cancelEditBtn").classList.add("hidden");
+  renderAdminGames();
 }
 
-$("cancelEditBtn").addEventListener("click", resetGameForm);
-
-/* PAGE ROUTING */
-async function startWebsite() {
+/* RESTORE SESSION IF ALREADY LOGGED IN */
+async function initializeWebsite() {
   await loadGames();
 
-  const params = new URLSearchParams(window.location.search);
-  const gameId = params.get("game");
-  const featured = params.get("featured");
-  const page = params.get("page");
+  const { data } = await client.auth.getSession();
 
-  if (gameId) {
-    await showGameDetails(gameId);
-  } else if (featured) {
-    showFeatured(featured);
-  } else if (page === "more") {
-    showPage("morePage");
-  } else if (page === "admin") {
-    showPage("adminPage");
+  if (data.session) {
+    currentUser = data.session.user;
     await checkAdmin();
-  } else {
-    showPage("homePage");
   }
 }
 
-startWebsite();
+client.auth.onAuthStateChange((event, session) => {
+  if (event === "SIGNED_OUT") {
+    currentUser = null;
+    document.getElementById("login-area").classList.remove("hidden");
+    document.getElementById("dashboard").classList.add("hidden");
+  }
+});
+
+initializeWebsite();
 </script>
 
 </body>
