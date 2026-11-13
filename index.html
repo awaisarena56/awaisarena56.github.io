@@ -7,86 +7,152 @@
 <title>Awais Arena | Official Gaming</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#080808;color:white;font-family:Arial,sans-serif}
-header{padding:22px 8%;display:flex;justify-content:space-between;align-items:center;background:#111;border-bottom:2px solid #e50914}
-.logo{font-size:27px;font-weight:900;color:#ff2635}
-nav a{color:white;text-decoration:none;margin-left:20px;font-weight:bold}
-.hero{text-align:center;padding:95px 20px;background:linear-gradient(120deg,#160000,#090909 65%,#280000)}
-.hero h1{font-size:clamp(38px,8vw,75px);color:#ff2635;text-shadow:0 0 20px red}
-.hero h2{font-size:24px;margin:15px}
-.hero p{color:#bbb;margin:18px}
-.btn{display:inline-block;background:#e50914;color:white;padding:14px 25px;border-radius:7px;text-decoration:none;font-weight:bold;margin:10px}
-.btn:hover{background:#ff3542}
-section{padding:55px 8%;text-align:center}
-h2.title{font-size:32px;margin-bottom:30px}
-h2.title span{color:#ff2635}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
-.card{background:#151515;border:1px solid #333;border-radius:12px;padding:28px 15px;transition:.2s}
-.card:hover{border-color:red;transform:translateY(-5px)}
-.card h3{color:#ff3945;margin:12px}
-.card p{color:#aaa}
-.live{background:#150606;border-top:1px solid #600;border-bottom:1px solid #600}
-footer{background:#111;text-align:center;padding:35px 15px;color:#aaa}
-footer a{color:#ff3945;text-decoration:none;margin:10px}
-@media(max-width:600px){header{flex-direction:column;gap:15px}nav a{margin:8px;font-size:13px}.hero{padding:65px 15px}}
+html{scroll-behavior:smooth}
+body{
+ background:#080808;color:#fff;
+ font-family:Arial,sans-serif;
+}
+header{
+ background:#080808;padding:22px 7%;
+ display:flex;justify-content:space-between;
+ align-items:center;border-bottom:1px solid #b89536;
+ position:sticky;top:0;z-index:10;
+}
+.logo{font-size:25px;font-weight:900;color:#d4af37}
+nav a{
+ color:white;text-decoration:none;
+ margin-left:22px;font-weight:bold;font-size:14px
+}
+nav a:hover{color:#d4af37}
+.hero{
+ min-height:440px;padding:110px 20px;
+ text-align:center;
+ background:linear-gradient(120deg,#080808,#211b0c,#080808);
+ border-bottom:1px solid #806522;
+}
+.hero h1{
+ font-size:clamp(42px,7vw,75px);
+ color:#e1bd55;
+ text-shadow:0 0 25px #a47c25;
+}
+.hero h2{margin:18px 0;font-size:23px}
+.hero p{color:#bbb;line-height:2}
+.btn{
+ display:inline-block;background:#c49b35;
+ color:#080808;padding:14px 25px;
+ margin:20px 8px;border-radius:5px;
+ text-decoration:none;font-weight:bold;
+}
+.btn:hover{background:#f0d47a}
+section{padding:65px 7%;text-align:center}
+.title{font-size:32px;margin-bottom:30px}
+.title span{color:#d4af37}
+.live{
+ background:#111;border-top:1px solid #806522;
+ border-bottom:1px solid #806522;
+}
+.live h2{color:#e1bd55;margin-bottom:15px}
+.games{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+ gap:20px;
+}
+.card{
+ background:#151515;border:1px solid #554522;
+ border-radius:10px;padding:30px 15px;
+ transition:.3s;
+}
+.card:hover{
+ transform:translateY(-7px);
+ border-color:#e1bd55;
+ box-shadow:0 0 18px #80652255;
+}
+.card h3{color:#e1bd55;margin-bottom:12px}
+.card p{color:#aaa;line-height:1.7}
+.social a{
+ display:inline-block;color:#e1bd55;
+ border:1px solid #806522;
+ padding:13px 22px;margin:8px;
+ text-decoration:none;border-radius:5px;
+}
+footer{
+ background:#111;padding:28px;
+ text-align:center;color:#999;
+ border-top:1px solid #806522;
+}
+footer span{color:#d4af37}
+@media(max-width:600px){
+ header{flex-direction:column;gap:18px}
+ nav a{margin:0 7px;font-size:12px}
+}
 </style>
 </head>
 <body>
 
 <header>
-<div class="logo">⚔ AWAIS ARENA</div>
-<nav>
-<a href="#home">HOME</a>
-<a href="#games">GAMES</a>
-<a href="#live">LIVE</a>
-<a href="#social">SOCIAL</a>
-</nav>
+ <div class="logo">✦ AWAIS ARENA</div>
+ <nav>
+  <a href="#home">HOME</a>
+  <a href="#games">GAMES</a>
+  <a href="#live">LIVE</a>
+  <a href="#social">SOCIAL</a>
+ </nav>
 </header>
 
 <div class="hero" id="home">
-<h1>AWAIS ARENA</h1>
-<h2>WELCOME TO THE GAMING WORLD</h2>
-<p>Gaming • Live Streams • Shorts • Entertainment</p>
-<a class="btn" href="https://www.youtube.com/@AWAISARENA56" target="_blank">▶ SUBSCRIBE NOW</a>
-<a class="btn" href="#live">WATCH LIVE</a>
+ <h1>AWAIS ARENA</h1>
+ <h2>WELCOME TO THE GAMING WORLD</h2>
+ <p>Gaming • Live Streams • Shorts • Entertainment</p>
+ <a class="btn" href="#social">SUBSCRIBE NOW</a>
+ <a class="btn" href="#live">WATCH LIVE</a>
 </div>
 
-<section id="live" class="live">
-<h2 class="title">🔴 <span>LIVE STREAMING</span></h2>
-<p>Join Awais Arena for exciting gaming live streams!</p>
-<a class="btn" href="https://www.youtube.com/@AWAISARENA56/live" target="_blank">WATCH LIVE NOW</a>
+<section class="live" id="live">
+ <h2>● LIVE STREAMING</h2>
+ <p>Join Awais Arena for exciting gaming adventures!</p>
+ <a class="btn" href="#social">WATCH LIVE NOW</a>
 </section>
 
 <section id="games">
-<h2 class="title">MY <span>GAMES</span></h2>
-<div class="cards">
-<div class="card"><h3>🎮 THE LAST OF US</h3><p>Survival • Adventure • Gameplay</p></div>
-<div class="card"><h3>⛏ MINECRAFT</h3><p>Building • Survival • Fun</p></div>
-<div class="card"><h3>🎯 VALORANT</h3><p>Action • Competitive Gaming</p></div>
-<div class="card"><h3>🏏 CRICKET 26</h3><p>Cricket • Matches • Gameplay</p></div>
-</div>
-</section>
+ <h2 class="title">MY <span>GAMES</span></h2>
+ <div class="games">
 
-<section>
-<h2 class="title">WHY <span>AWAIS ARENA?</span></h2>
-<div class="cards">
-<div class="card"><h3>🔴 LIVE STREAMS</h3><p>Watch exciting gaming streams.</p></div>
-<div class="card"><h3>🎬 GAMING SHORTS</h3><p>Enjoy highlights and short clips.</p></div>
-<div class="card"><h3>❤️ GAMING COMMUNITY</h3><p>Join us and play together!</p></div>
-</div>
+  <div class="card">
+   <h3>🎮 THE LAST OF US</h3>
+   <p>Survival • Adventure • Gameplay</p>
+  </div>
+
+  <div class="card">
+   <h3>⛏️ MINECRAFT</h3>
+   <p>Building • Survival • Fun</p>
+  </div>
+
+  <div class="card">
+   <h3>🎯 VALORANT</h3>
+   <p>Action • Competitive Gaming</p>
+  </div>
+
+  <div class="card">
+   <h3>🏏 CRICKET 26</h3>
+   <p>Cricket • Matches • Gameplay</p>
+  </div>
+
+ </div>
 </section>
 
 <section id="social" class="live">
-<h2 class="title">JOIN <span>OUR COMMUNITY</span></h2>
-<p>Follow Awais Arena on social media!</p>
-<a class="btn" href="https://www.youtube.com/@AWAISARENA56" target="_blank">YOUTUBE</a>
-<a class="btn" href="https://www.instagram.com/awaisarena0056/" target="_blank">INSTAGRAM</a>
+ <h2 class="title">FOLLOW <span>AWAIS ARENA</span></h2>
+ <p>Follow us for gaming videos, live streams and more!</p>
+ <div class="social">
+  <a href="#home">YOUTUBE</a>
+  <a href="#home">INSTAGRAM</a>
+  <a href="#home">FACEBOOK</a>
+ </div>
 </section>
 
 <footer>
-<h2 style="color:#ff2635">AWAIS ARENA</h2>
-<p style="margin:12px">ENTER THE GAME. PLAY TOGETHER.</p>
-<p>© 2026 Awais Arena. All Rights Reserved.</p>
+ <p>© 2026 <span>AWAIS ARENA</span> | All Rights Reserved</p>
+ <p>WELCOME TO THE GAMING WORLD</p>
 </footer>
 
 </body>
