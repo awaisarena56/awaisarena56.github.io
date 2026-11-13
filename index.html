@@ -5,88 +5,207 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Awais Arena | Official Gaming</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+}
 html{scroll-behavior:smooth}
 body{
- background:#080808;color:#fff;
+ background:#050505;
+ color:#fff;
  font-family:Arial,sans-serif;
 }
 header{
- background:#080808;padding:22px 7%;
- display:flex;justify-content:space-between;
- align-items:center;border-bottom:1px solid #b89536;
- position:sticky;top:0;z-index:10;
+ background:#050505;
+ padding:20px 7%;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ border-bottom:1px solid #76551f;
+ position:sticky;
+ top:0;
+ z-index:100;
 }
-.logo{font-size:25px;font-weight:900;color:#d4af37}
+.logo{
+ color:#a98242;
+ font-size:26px;
+ font-weight:900;
+ letter-spacing:2px;
+}
 nav a{
- color:white;text-decoration:none;
- margin-left:22px;font-weight:bold;font-size:14px
+ color:#eee;
+ text-decoration:none;
+ margin-left:22px;
+ font-size:13px;
+ font-weight:bold;
 }
-nav a:hover{color:#d4af37}
+nav a:hover{color:#b08d45}
+
 .hero{
- min-height:440px;padding:110px 20px;
+ min-height:490px;
+ padding:120px 20px;
  text-align:center;
- background:linear-gradient(120deg,#080808,#211b0c,#080808);
- border-bottom:1px solid #806522;
+ background:
+ radial-gradient(ellipse at center,#321015 0%,#16080b 35%,#050505 75%);
+ border-bottom:1px solid #651923;
+}
+.hero .tag{
+ color:#b08d45;
+ letter-spacing:5px;
+ font-size:13px;
+ margin-bottom:20px;
 }
 .hero h1{
- font-size:clamp(42px,7vw,75px);
- color:#e1bd55;
- text-shadow:0 0 25px #a47c25;
+ font-size:clamp(45px,8vw,85px);
+ color:#a98242;
+ letter-spacing:3px;
+ text-shadow:0 0 25px #76551f88;
 }
-.hero h2{margin:18px 0;font-size:23px}
-.hero p{color:#bbb;line-height:2}
+.hero h2{
+ margin:20px 0;
+ font-size:24px;
+}
+.hero p{
+ color:#aaa;
+ line-height:2;
+}
 .btn{
- display:inline-block;background:#c49b35;
- color:#080808;padding:14px 25px;
- margin:20px 8px;border-radius:5px;
- text-decoration:none;font-weight:bold;
+ display:inline-block;
+ background:#80601f;
+ color:white;
+ padding:15px 27px;
+ margin:20px 7px;
+ border-radius:4px;
+ text-decoration:none;
+ font-weight:bold;
+ border:1px solid #a98242;
+ transition:.3s;
 }
-.btn:hover{background:#f0d47a}
-section{padding:65px 7%;text-align:center}
-.title{font-size:32px;margin-bottom:30px}
-.title span{color:#d4af37}
+.btn:hover{
+ background:#8b1724;
+ border-color:#bd2636;
+ transform:translateY(-3px);
+}
+section{
+ padding:75px 7%;
+ text-align:center;
+}
+.title{
+ font-size:34px;
+ margin-bottom:35px;
+ letter-spacing:2px;
+}
+.title span{color:#a98242}
+
 .live{
- background:#111;border-top:1px solid #806522;
- border-bottom:1px solid #806522;
+ background:linear-gradient(120deg,#100609,#17080c,#080808);
+ border-top:1px solid #651923;
+ border-bottom:1px solid #651923;
 }
-.live h2{color:#e1bd55;margin-bottom:15px}
+.live h2{
+ color:#a98242;
+ font-size:30px;
+ margin-bottom:18px;
+}
+.live p{color:#bbb}
+
 .games{
  display:grid;
- grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
- gap:20px;
+ grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+ gap:22px;
 }
 .card{
- background:#151515;border:1px solid #554522;
- border-radius:10px;padding:30px 15px;
+ background:linear-gradient(145deg,#171310,#090909);
+ border:1px solid #59421f;
+ border-radius:10px;
+ padding:35px 18px;
  transition:.3s;
 }
 .card:hover{
  transform:translateY(-7px);
- border-color:#e1bd55;
- box-shadow:0 0 18px #80652255;
+ border-color:#a98242;
+ box-shadow:0 0 25px #76551f33;
 }
-.card h3{color:#e1bd55;margin-bottom:12px}
-.card p{color:#aaa;line-height:1.7}
+.card .number{
+ color:#8b1724;
+ font-size:13px;
+ letter-spacing:3px;
+ margin-bottom:18px;
+}
+.card h3{
+ color:#b08d45;
+ font-size:19px;
+ margin-bottom:15px;
+}
+.card p{
+ color:#aaa;
+ line-height:1.8;
+ font-size:14px;
+}
+.card .line{
+ width:45px;
+ height:2px;
+ background:#8b1724;
+ margin:18px auto 0;
+}
+
+.about{
+ background:#0b0908;
+ border-top:1px solid #382b19;
+}
+.about p{
+ max-width:700px;
+ margin:auto;
+ color:#aaa;
+ line-height:2;
+}
+.social{
+ display:flex;
+ justify-content:center;
+ flex-wrap:wrap;
+ gap:15px;
+ margin-top:25px;
+}
 .social a{
- display:inline-block;color:#e1bd55;
- border:1px solid #806522;
- padding:13px 22px;margin:8px;
- text-decoration:none;border-radius:5px;
+ color:#b08d45;
+ border:1px solid #76551f;
+ padding:14px 24px;
+ text-decoration:none;
+ border-radius:4px;
+ transition:.3s;
+}
+.social a:hover{
+ background:#8b1724;
+ color:white;
 }
 footer{
- background:#111;padding:28px;
- text-align:center;color:#999;
- border-top:1px solid #806522;
+ background:#050505;
+ border-top:1px solid #76551f;
+ padding:30px 15px;
+ text-align:center;
+ color:#888;
+ line-height:2;
 }
-footer span{color:#d4af37}
-@media(max-width:600px){
- header{flex-direction:column;gap:18px}
- nav a{margin:0 7px;font-size:12px}
+footer span{color:#a98242}
+
+@media(max-width:650px){
+ header{
+  flex-direction:column;
+  gap:18px;
+ }
+ nav a{
+  margin:0 7px;
+  font-size:11px;
+ }
+ .hero{padding:90px 15px}
+ section{padding:55px 5%}
 }
 </style>
 </head>
+
 <body>
 
 <header>
@@ -95,54 +214,75 @@ footer span{color:#d4af37}
   <a href="#home">HOME</a>
   <a href="#games">GAMES</a>
   <a href="#live">LIVE</a>
-  <a href="#social">SOCIAL</a>
+  <a href="#about">ABOUT</a>
  </nav>
 </header>
 
 <div class="hero" id="home">
+ <div class="tag">OFFICIAL GAMING CHANNEL</div>
  <h1>AWAIS ARENA</h1>
  <h2>WELCOME TO THE GAMING WORLD</h2>
- <p>Gaming • Live Streams • Shorts • Entertainment</p>
- <a class="btn" href="#social">SUBSCRIBE NOW</a>
+ <p>Gaming • Live Streams • Gameplay • Entertainment</p>
+ <a class="btn" href="#social">FOLLOW THE ARENA</a>
  <a class="btn" href="#live">WATCH LIVE</a>
 </div>
 
 <section class="live" id="live">
  <h2>● LIVE STREAMING</h2>
- <p>Join Awais Arena for exciting gaming adventures!</p>
+ <p>Experience epic gaming moments with Awais Arena.</p>
  <a class="btn" href="#social">WATCH LIVE NOW</a>
 </section>
 
 <section id="games">
  <h2 class="title">MY <span>GAMES</span></h2>
+
  <div class="games">
 
   <div class="card">
-   <h3>🎮 THE LAST OF US</h3>
-   <p>Survival • Adventure • Gameplay</p>
+   <div class="number">GAME 01</div>
+   <h3>THE LAST OF US</h3>
+   <p>Survival • Story • Adventure</p>
+   <div class="line"></div>
   </div>
 
   <div class="card">
-   <h3>⛏️ MINECRAFT</h3>
-   <p>Building • Survival • Fun</p>
+   <div class="number">GAME 02</div>
+   <h3>MINECRAFT</h3>
+   <p>Building • Survival • Exploration</p>
+   <div class="line"></div>
   </div>
 
   <div class="card">
-   <h3>🎯 VALORANT</h3>
-   <p>Action • Competitive Gaming</p>
+   <div class="number">GAME 03</div>
+   <h3>VALORANT</h3>
+   <p>Action • Tactical • Competitive</p>
+   <div class="line"></div>
   </div>
 
   <div class="card">
-   <h3>🏏 CRICKET 26</h3>
+   <div class="number">GAME 04</div>
+   <h3>CRICKET 26</h3>
    <p>Cricket • Matches • Gameplay</p>
+   <div class="line"></div>
   </div>
 
  </div>
 </section>
 
-<section id="social" class="live">
- <h2 class="title">FOLLOW <span>AWAIS ARENA</span></h2>
- <p>Follow us for gaming videos, live streams and more!</p>
+<section class="about" id="about">
+ <h2 class="title">ABOUT <span>AWAIS ARENA</span></h2>
+ <p>
+ Welcome to Awais Arena, your destination for gaming,
+ live streams, exciting gameplay and entertainment.
+ Join the arena and be part of the gaming journey.
+ </p>
+</section>
+
+<section id="social">
+ <h2 class="title">JOIN <span>THE ARENA</span></h2>
+ <p style="color:#aaa">
+ Follow Awais Arena for gaming videos and live streams.
+ </p>
  <div class="social">
   <a href="#home">YOUTUBE</a>
   <a href="#home">INSTAGRAM</a>
@@ -151,8 +291,8 @@ footer span{color:#d4af37}
 </section>
 
 <footer>
- <p>© 2026 <span>AWAIS ARENA</span> | All Rights Reserved</p>
- <p>WELCOME TO THE GAMING WORLD</p>
+ <p>© 2026 <span>AWAIS ARENA</span></p>
+ <p>BUILT FOR GAMERS • POWERED BY PASSION</p>
 </footer>
 
 </body>
